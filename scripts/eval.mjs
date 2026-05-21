@@ -42,7 +42,7 @@ const QUERIES = [
   {
     q: 'Family-friendly charter in Greece, August, 10 people, water toys',
     note: 'clear',
-    expect: { destination: 'Greece', guests: 10, vibe: 'family-friendly', amenities: ['water toys'] },
+    expect: { region_specific: 'Greece', guests: 10, vibe: 'family-friendly', amenities: ['water toys'] },
   },
   {
     q: 'Explorer yacht in Norway for 12, September, with stabilizers',

@@ -103,6 +103,13 @@ async function copy() {
 /* Prism JSON token colors, dual-theme via CSS variables. Non-scoped because
    Prism injects raw <span class="token …"> nodes via v-html. */
 .json-output {
+  /* Wrap long string values (e.g. `reasoning`) instead of overflowing.
+     pre-wrap preserves newlines + leading indentation; overflow-wrap: anywhere
+     breaks otherwise-unbreakable tokens (long URLs) and lets the box shrink
+     below the longest word so the panel never forces horizontal scroll. The
+     pre keeps overflow-auto as a fallback. white-space is inherited by <code>. */
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
   --tok-property: #0369a1; /* keys */
   --tok-string: #15803d;
   --tok-number: #b45309;
