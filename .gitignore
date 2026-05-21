@@ -1,0 +1,9 @@
+.env
+.env.local
+node_modules
+.nuxt
+.output
+.vercel
+*.log
+.DS_Store
+.claude
